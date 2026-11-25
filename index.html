@@ -29,9 +29,20 @@
 
     <link rel="preload" href="assets/fonts/luckiest-guy.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="assets/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/patrick-hand.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Icons. Brand marks from Simple Icons (CC0); speaker and play drawn here. -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-reddit" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+      <symbol id="i-devpost" viewBox="0 0 24 24"><path d="M6.002 1.61L0 12.004 6.002 22.39h11.996L24 12.004 17.998 1.61zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436-3.21 6.302-6.456 6.302H7.595zm2.517 2.449v7.714h1.241c2.646 0 3.862-1.55 3.862-3.861.009-2.569-1.096-3.853-3.767-3.853Z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 8 4.5Z"/></symbol>
+      <symbol id="i-sound-on" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3Z" stroke-linejoin="round"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" fill="none" stroke-linecap="round"/></symbol>
+      <symbol id="i-sound-off" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3Z" stroke-linejoin="round"/><path d="M16 9l6 6M22 9l-6 6" fill="none" stroke-linecap="round"/></symbol>
+    </svg>
     <a class="skip" href="#main">Skip to content</a>
 
     <header class="nav">
@@ -41,7 +52,11 @@
         <a href="#suspects">Suspects</a>
         <a href="#reddit">On Reddit</a>
       </nav>
-      <a class="btn btn-sm" href="https://www.reddit.com/r/WhoFartedDaily/">Play</a>
+      <button class="sound-btn" type="button" id="sound" aria-pressed="false" aria-label="Character sounds" title="Character sounds">
+        <svg class="ico-on" aria-hidden="true"><use href="#i-sound-on"/></svg>
+        <svg class="ico-off" aria-hidden="true"><use href="#i-sound-off"/></svg>
+      </button>
+      <a class="btn btn-sm" href="https://www.reddit.com/r/WhoFartedDaily/"><span class="btn-ico" aria-hidden="true"><svg><use href="#i-reddit"/></svg></span>Play</a>
     </header>
 
     <main id="main">
@@ -55,9 +70,9 @@
         </p>
         <div class="hero-ctas">
           <a class="btn btn-big" href="https://www.reddit.com/r/WhoFartedDaily/">
-            Play on Reddit <span aria-hidden="true">→</span>
+            <span class="btn-ico" aria-hidden="true"><svg><use href="#i-reddit"/></svg></span>Play on Reddit
           </a>
-          <a class="btn btn-ghost" href="#trailer">Watch the 55-sec trailer</a>
+          <a class="btn btn-ghost" href="#trailer"><span class="btn-ico btn-ico-play" aria-hidden="true"><svg><use href="#i-play"/></svg></span>Watch the 55-sec trailer</a>
         </div>
         <p class="hero-meta">Free · 2 minutes a day · New case at 00:00 UTC</p>
 
@@ -87,7 +102,7 @@
         </div>
         <p class="note">
           Recorded from a real case, played in the Reddit app.
-          <a href="https://youtu.be/RtDaoH_iMvU">Open on YouTube</a>
+          <a href="https://youtu.be/RtDaoH_iMvU"><svg class="ico" aria-hidden="true"><use href="#i-youtube"/></svg>Open on YouTube</a>
         </p>
       </section>
 
@@ -159,12 +174,12 @@
       <section class="section" id="suspects">
         <h2 class="logo section-title">Meet the suspects</h2>
         <ul class="cards">
-          <li class="card"><img src="assets/suspects/agnes-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Agnes <span>Grandma</span></h3><p>Says what she saw. Starts with “Oh dear!”</p></div></li>
-          <li class="card"><img src="assets/suspects/brock-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Brock <span>Gym bro</span></h3><p>Calls everyone “bro”. Has had a lot of protein.</p></div></li>
-          <li class="card"><img src="assets/suspects/pip-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Pip <span>Toddler</span></h3><p>Can’t talk yet. Points at the smell. Hugs people who are innocent.</p></div></li>
-          <li class="card"><img src="assets/suspects/biscuit-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Biscuit <span>Dog</span></h3><p>Can’t talk. Sniffs people to find out what they ate.</p></div></li>
-          <li class="card"><img src="assets/suspects/linda-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Linda <span>Office manager</span></h3><p>Writes everything down. Very exact.</p></div></li>
-          <li class="card"><img src="assets/suspects/marcel-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Marcel <span>Mime</span></h3><p>Never says a word. Acts out what he saw.</p></div></li>
+          <li class="card" data-id="agnes"><img src="assets/suspects/agnes-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Agnes <span>Grandma</span></h3><p>Says what she saw. Starts with “Oh dear!”</p></div></li>
+          <li class="card" data-id="brock"><img src="assets/suspects/brock-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Brock <span>Gym bro</span></h3><p>Calls everyone “bro”. Has had a lot of protein.</p></div></li>
+          <li class="card" data-id="pip"><img src="assets/suspects/pip-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Pip <span>Toddler</span></h3><p>Can’t talk yet. Points at the smell. Hugs people who are innocent.</p></div></li>
+          <li class="card" data-id="biscuit"><img src="assets/suspects/biscuit-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Biscuit <span>Dog</span></h3><p>Can’t talk. Sniffs people to find out what they ate.</p></div></li>
+          <li class="card" data-id="linda"><img src="assets/suspects/linda-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Linda <span>Office manager</span></h3><p>Writes everything down. Very exact.</p></div></li>
+          <li class="card" data-id="marcel"><img src="assets/suspects/marcel-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Marcel <span>Mime</span></h3><p>Never says a word. Acts out what he saw.</p></div></li>
         </ul>
       </section>
 
@@ -216,20 +231,20 @@
 
       <!-- Final CTA -->
       <section class="final">
-        <img class="final-face" src="assets/suspects/linda-smug.svg" alt="" width="108" height="118" loading="lazy" />
+        <img class="final-face" data-id="linda" src="assets/suspects/linda-smug.svg" alt="" width="108" height="118" loading="lazy" />
         <h2 class="logo final-title">Today’s case is waiting.</h2>
         <p>Somebody in that lift is guilty. Can you sniff them out?</p>
-        <a class="btn btn-big" href="https://www.reddit.com/r/WhoFartedDaily/">Play on Reddit <span aria-hidden="true">→</span></a>
+        <a class="btn btn-big" href="https://www.reddit.com/r/WhoFartedDaily/"><span class="btn-ico" aria-hidden="true"><svg><use href="#i-reddit"/></svg></span>Play on Reddit</a>
       </section>
     </main>
 
     <footer class="footer">
       <p class="logo footer-logo">WHO FARTED?</p>
-      <p>
-        <a href="https://www.reddit.com/r/WhoFartedDaily/">r/WhoFartedDaily</a> ·
-        <a href="https://devpost.com/software/who-farted">Devpost</a> ·
-        <a href="https://youtu.be/RtDaoH_iMvU">YouTube</a> ·
-        <a href="https://github.com/Mallikarjuntr/who-farted">GitHub</a>
+      <p class="footer-links">
+        <a href="https://www.reddit.com/r/WhoFartedDaily/"><svg class="ico" aria-hidden="true"><use href="#i-reddit"/></svg>r/WhoFartedDaily</a>
+        <a href="https://devpost.com/software/who-farted"><svg class="ico" aria-hidden="true"><use href="#i-devpost"/></svg>Devpost</a>
+        <a href="https://youtu.be/RtDaoH_iMvU"><svg class="ico" aria-hidden="true"><use href="#i-youtube"/></svg>YouTube</a>
+        <a href="https://github.com/Mallikarjuntr/who-farted"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
       </p>
       <p class="footer-small">
         An independent game built on Reddit’s Developer Platform for the Game of the Day Hackathon

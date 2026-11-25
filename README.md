@@ -16,7 +16,14 @@ A static site with no build step: `index.html`, `styles.css`, `main.js` and `ass
 
 - `assets/suspects/` — the six characters in six moods, exported as SVG from the game's own art code.
 - `assets/img/` — real screens from the game, recorded in the Reddit app.
-- `assets/fonts/` — Luckiest Guy (Apache License 2.0) and Rubik (SIL Open Font License 1.1), self-hosted.
+- `assets/suspects/` also holds each suspect's guilty face, shown when you point at them.
+- `assets/fonts/` — Luckiest Guy (Apache License 2.0), Rubik and Patrick Hand (both SIL Open Font
+  License 1.1), self-hosted.
+- Brand icons (Reddit, YouTube, GitHub, Devpost) are from Simple Icons (CC0), inlined in `index.html`.
+
+Point at a suspect and they look guilty and make a short sound. The sounds are made in code with
+the Web Audio API (no audio files), only start after the visitor's first click or tap, as browsers
+require, and can be muted with the speaker button.
 
 The trailer loads from youtube-nocookie.com only when the visitor presses play.
 
