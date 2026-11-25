@@ -4,6 +4,7 @@ The one-page website for **Who Farted?**, a daily comedic deduction game that ru
 
 Someone farted in the lift. Six suspects, one guess, a new case every day.
 
+- Live site: https://who-farted.netlify.app/
 - Play: https://www.reddit.com/r/WhoFartedDaily/
 - Trailer (55 s): https://youtu.be/RtDaoH_iMvU
 - Devpost: https://devpost.com/software/who-farted
