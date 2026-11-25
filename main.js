@@ -13,8 +13,11 @@ function placeBubble(index) {
   if (!face) return;
   const rowBox = lineup.getBoundingClientRect();
   const faceBox = face.getBoundingClientRect();
-  const left = faceBox.left - rowBox.left + faceBox.width / 2;
-  const top = faceBox.top - rowBox.top - 30;
+  // On wide screens the page is drawn at 80% (see styles.css). Screen
+  // measurements come back zoomed, so turn them back into page pixels.
+  const scale = lineup.offsetWidth ? rowBox.width / lineup.offsetWidth : 1;
+  const left = (faceBox.left - rowBox.left + faceBox.width / 2) / scale;
+  const top = (faceBox.top - rowBox.top) / scale - 30;
   bubble.style.left = `${left}px`;
   bubble.style.top = `${Math.max(0, top)}px`;
   bubble.textContent = DENIALS[index % DENIALS.length];

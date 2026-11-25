@@ -758,6 +758,32 @@ a {
   margin: 10px auto 0 !important;
 }
 
+/* ---------- laptops and desktops ----------
+   Everything above is sized for a phone held close. On a laptop the same sizes
+   felt about 25% too big, so wide screens draw the whole page at 80%.
+   Sizes tied to the screen width (vw) are raised by 1.25 to cancel the zoom,
+   so they still track the window the same way. */
+
+@media (min-width: 901px) {
+  body {
+    zoom: 0.8;
+  }
+  .hero-logo {
+    font-size: clamp(64px, 15vw, 150px);
+    -webkit-text-stroke-width: clamp(3px, 0.75vw, 6px);
+    text-shadow: clamp(4px, 1vw, 9px) clamp(4px, 1vw, 9px) 0 var(--ink);
+  }
+  .hero-lead {
+    font-size: clamp(20px, 3.25vw, 28px);
+  }
+  .section-title {
+    font-size: clamp(40px, 7.5vw, 64px);
+  }
+  .final-title {
+    font-size: clamp(40px, 7.5vw, 68px);
+  }
+}
+
 /* ---------- small screens ---------- */
 
 @media (max-width: 900px) {
