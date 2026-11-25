@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Who Farted? A daily elevator mystery on Reddit</title>
+    <meta
+      name="description"
+      content="Someone farted in the lift. Six suspects, one guess, a new case every day. A free daily deduction game you play inside Reddit."
+    />
+    <meta name="theme-color" content="#FFC93C" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Who Farted? A daily elevator mystery on Reddit" />
+    <meta
+      property="og:description"
+      content="Six suspects. One lift. One guess a day. Play free in r/WhoFartedDaily."
+    />
+    <meta property="og:image" content="assets/img/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preload" href="assets/fonts/luckiest-guy.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/rubik.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav">
+      <a class="nav-logo" href="#top" aria-label="Who Farted? home">WHO FARTED?</a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#how">How to play</a>
+        <a href="#suspects">Suspects</a>
+        <a href="#reddit">On Reddit</a>
+      </nav>
+      <a class="btn btn-sm" href="https://www.reddit.com/r/WhoFartedDaily/">Play</a>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <p class="tag tag-tilt">A daily game on Reddit</p>
+        <h1 class="logo hero-logo">WHO FARTED?</h1>
+        <p class="hero-lead">
+          Someone farted in the lift. <strong>Six suspects. One guess.</strong> A new case every
+          single day.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-big" href="https://www.reddit.com/r/WhoFartedDaily/">
+            Play on Reddit <span aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="#trailer">Watch the 55-sec trailer</a>
+        </div>
+        <p class="hero-meta">Free · 2 minutes a day · New case at 00:00 UTC</p>
+
+        <div class="lift" aria-label="The six suspects stand in the lift">
+          <div class="lift-wall">BACK WALL</div>
+          <div class="lift-row" id="lineup">
+            <figure class="face" data-id="agnes"><img src="assets/suspects/agnes-shifty.svg" alt="Agnes" width="108" height="118" /><figcaption>AGNES</figcaption></figure>
+            <figure class="face" data-id="brock"><img src="assets/suspects/brock-nervous.svg" alt="Brock" width="108" height="118" /><figcaption>BROCK</figcaption></figure>
+            <figure class="face" data-id="pip"><img src="assets/suspects/pip-neutral.svg" alt="Pip" width="108" height="118" /><figcaption>PIP</figcaption></figure>
+            <figure class="face" data-id="biscuit"><img src="assets/suspects/biscuit-shifty.svg" alt="Biscuit" width="108" height="118" /><figcaption>BISCUIT</figcaption></figure>
+            <figure class="face" data-id="linda"><img src="assets/suspects/linda-nervous.svg" alt="Linda" width="108" height="118" /><figcaption>LINDA</figcaption></figure>
+            <figure class="face" data-id="marcel"><img src="assets/suspects/marcel-shifty.svg" alt="Marcel" width="108" height="118" /><figcaption>MARCEL</figcaption></figure>
+            <span class="bubble" id="denial" aria-hidden="true">NOT ME!</span>
+          </div>
+          <div class="lift-doors">▲ DOORS · WAY IN ▲</div>
+        </div>
+      </section>
+
+      <!-- Trailer -->
+      <section class="section" id="trailer">
+        <h2 class="logo section-title">Watch it in 55 seconds</h2>
+        <div class="video sticker">
+          <button class="video-poster" type="button" id="play-trailer" aria-label="Play the trailer video">
+            <img src="assets/img/shot-01.jpg" alt="Someone farted in the lift. Who did it?" width="1280" height="720" loading="lazy" />
+            <span class="video-play" aria-hidden="true">▶</span>
+          </button>
+        </div>
+        <p class="note">
+          Recorded from a real case, played in the Reddit app.
+          <a href="https://youtu.be/RtDaoH_iMvU">Open on YouTube</a>
+        </p>
+      </section>
+
+      <!-- How to play -->
+      <section class="section" id="how">
+        <h2 class="logo section-title">How to play</h2>
+        <ol class="steps">
+          <li class="step">
+            <div class="phone"><img src="assets/img/phone-clue.jpg" alt="A clue card: Bro! Biscuit did NOT eat BEANS." width="498" height="1000" loading="lazy" /></div>
+            <div class="step-text">
+              <span class="step-num">1</span>
+              <h3>Tap a suspect. Hear their clue.</h3>
+              <p>
+                Every clue is one short fact in plain words. Agnes starts with “Oh dear!”, Brock
+                says “Bro!”, Biscuit sniffs, Marcel mimes. <strong>Every clue is true.</strong>
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="phone"><img src="assets/img/phone-innocent.jpg" alt="Brock is crossed out and says Phew!" width="498" height="1000" loading="lazy" /></div>
+            <div class="step-text">
+              <span class="step-num">2</span>
+              <h3>Cross out the innocent.</h3>
+              <p>
+                Mark someone innocent and they sigh <em>“Phew!”</em>. The game tells you when the
+                clues really prove it, and says <em>“Prove it!”</em> when they don’t yet.
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="phone"><img src="assets/img/phone-gotcha.jpg" alt="GOTCHA! Linda did it." width="498" height="1000" loading="lazy" /></div>
+            <div class="step-text">
+              <span class="step-num">3</span>
+              <h3>Make ONE guess.</h3>
+              <p>
+                No take-backs. Get it right and it’s <strong>GOTCHA!</strong> Get it wrong and the
+                game shows you, step by step, how to solve it.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- The lift map -->
+      <section class="section split" id="lift">
+        <div class="split-text">
+          <h2 class="logo section-title left">No left. No right.</h2>
+          <p>
+            “Left” of whom? In this lift, places are named after things you can see: the
+            <b>BUTTONS</b>, the <b>MIRROR</b>, the <b>BACK WALL</b> and the <b>DOORS</b>.
+          </p>
+          <p>A clue like <q>The farter stood by the MIRROR</q> lights up exactly those spots.</p>
+        </div>
+        <div class="mini-lift sticker" aria-label="Lift map: back wall at the top, buttons on the left, mirror on the right, doors at the bottom">
+          <div class="ml-back">BACK WALL</div>
+          <div class="ml-mid">
+            <div class="ml-side ml-buttons"><span>BUTTONS</span></div>
+            <div class="ml-grid">
+              <span></span><span></span><span class="lit"></span>
+              <span></span><span></span><span class="lit"></span>
+            </div>
+            <div class="ml-side ml-mirror"><span>MIRROR</span></div>
+          </div>
+          <div class="ml-doors">▲ DOORS ▲</div>
+        </div>
+      </section>
+
+      <!-- Suspects -->
+      <section class="section" id="suspects">
+        <h2 class="logo section-title">Meet the suspects</h2>
+        <ul class="cards">
+          <li class="card"><img src="assets/suspects/agnes-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Agnes <span>Grandma</span></h3><p>Says what she saw. Starts with “Oh dear!”</p></div></li>
+          <li class="card"><img src="assets/suspects/brock-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Brock <span>Gym bro</span></h3><p>Calls everyone “bro”. Has had a lot of protein.</p></div></li>
+          <li class="card"><img src="assets/suspects/pip-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Pip <span>Toddler</span></h3><p>Can’t talk yet. Points at the smell. Hugs people who are innocent.</p></div></li>
+          <li class="card"><img src="assets/suspects/biscuit-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Biscuit <span>Dog</span></h3><p>Can’t talk. Sniffs people to find out what they ate.</p></div></li>
+          <li class="card"><img src="assets/suspects/linda-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Linda <span>Office manager</span></h3><p>Writes everything down. Very exact.</p></div></li>
+          <li class="card"><img src="assets/suspects/marcel-neutral.svg" alt="" width="108" height="118" loading="lazy" /><div><h3>Marcel <span>Mime</span></h3><p>Never says a word. Acts out what he saw.</p></div></li>
+        </ul>
+      </section>
+
+      <!-- The week -->
+      <section class="section" id="week">
+        <h2 class="logo section-title">Every week has a shape</h2>
+        <div class="week">
+          <div class="day sticker day-easy"><p class="day-when">Mon – Tue</p><p class="day-what">EASY</p><p>4 suspects. A gentle start.</p></div>
+          <div class="day sticker day-mid"><p class="day-when">Wed – Fri</p><p class="day-what">ALL SIX</p><p>Who ate what matters now.</p></div>
+          <div class="day sticker day-hard"><p class="day-when">Sat – Sun</p><p class="day-what">THE FARTER LIES</p><p>Everyone else still tells the truth.</p></div>
+        </div>
+      </section>
+
+      <!-- Reddit -->
+      <section class="section split split-rev" id="reddit">
+        <div class="split-text">
+          <h2 class="logo section-title left">Better with the whole sub</h2>
+          <ul class="ticks">
+            <li><b>Who the sub blamed.</b> After your guess, see how everyone voted.</li>
+            <li><b>TOP SNIFFERS.</b> Today’s fastest right guesses and the longest streaks.</li>
+            <li><b>Your Reddit avatar on your result</b>, with your streak badge.</li>
+            <li><b>Spoiler-free verdicts.</b> One tap posts your time and streak as a comment.</li>
+          </ul>
+          <p class="badges-title">Streak badges, shown next to your name:</p>
+          <ul class="badges">
+            <li style="--bg: #e9e4d8">Sniffer</li>
+            <li style="--bg: #8fe3d6">Rookie Sniffer <small>1 day</small></li>
+            <li style="--bg: #18a999">Detective <small>3 days</small></li>
+            <li style="--bg: #ffc93c">Senior Sniffer <small>7 days</small></li>
+            <li style="--bg: #ff5a36">Chief Inspector <small>14 days</small></li>
+            <li style="--bg: #141414; --fg: #fff">Legendary Nose <small>30 days</small></li>
+          </ul>
+        </div>
+        <div class="phone phone-tilt"><img src="assets/img/phone-community.jpg" alt="Who the sub blamed, the TOP SNIFFERS leaderboard and a posted verdict" width="498" height="1000" loading="lazy" /></div>
+      </section>
+
+      <!-- Lose and learn -->
+      <section class="section split" id="learn">
+        <div class="split-text">
+          <h2 class="logo section-title left">Guessed wrong? Learn it.</h2>
+          <p>
+            A wrong guess isn’t a dead end. The game walks you through the case, step by step, and
+            tells you exactly why your pick could not be the farter.
+          </p>
+          <p>Tomorrow there’s a new case. And a new chance.</p>
+        </div>
+        <div class="phone phone-tilt-r"><img src="assets/img/phone-solve.jpg" alt="WRONG GUESS! with the how-to-solve-it steps" width="498" height="1000" loading="lazy" /></div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="final">
+        <img class="final-face" src="assets/suspects/linda-smug.svg" alt="" width="108" height="118" loading="lazy" />
+        <h2 class="logo final-title">Today’s case is waiting.</h2>
+        <p>Somebody in that lift is guilty. Can you sniff them out?</p>
+        <a class="btn btn-big" href="https://www.reddit.com/r/WhoFartedDaily/">Play on Reddit <span aria-hidden="true">→</span></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="logo footer-logo">WHO FARTED?</p>
+      <p>
+        <a href="https://www.reddit.com/r/WhoFartedDaily/">r/WhoFartedDaily</a> ·
+        <a href="https://devpost.com/software/who-farted">Devpost</a> ·
+        <a href="https://youtu.be/RtDaoH_iMvU">YouTube</a> ·
+        <a href="https://github.com/Mallikarjuntr/who-farted">GitHub</a>
+      </p>
+      <p class="footer-small">
+        An independent game built on Reddit’s Developer Platform for the Game of the Day Hackathon
+        2026. All characters, art and sound are original.
+      </p>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
